@@ -83,4 +83,3 @@ def ft_garden_security() -> None:
 
 if __name__ == "__main__":
     ft_garden_security()
-

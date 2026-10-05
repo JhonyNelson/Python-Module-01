@@ -39,4 +39,3 @@ def ft_plant_factory() -> None:
 
 if __name__ == "__main__":
     ft_plant_factory()
-
