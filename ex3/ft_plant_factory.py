@@ -21,22 +21,22 @@ class Plant:
         print(f"{self.name}: {self.height:.1f}cm, {self.days} days old")
 
 
-def ft_plant_growth() -> None:
-    plant: Plant = Plant("Rose", 25.0, 30, 0.8)
-    initial_height: float = plant.height
+def ft_plant_factory() -> None:
+    print("=== Plant Factory Output ===")
 
-    print("=== Garden Plant Growth ===")
-    plant.show()
+    plants: list[Plant] = [
+        Plant("Rose", 25.0, 30),
+        Plant("Oak", 200.0, 365),
+        Plant("Cactus", 5.0, 90),
+        Plant("Sunflower", 80.0, 45),
+        Plant("Fern", 15.0, 120),
+    ]
 
-    for day in range(1, 8):
-        print(f"=== Day {day} ===")
-        plant.grow()
-        plant.age()
+    for plant in plants:
+        print("Created: ", end="")
         plant.show()
-
-    growth: float = round(plant.height - initial_height, 1)
-    print(f"Growth this week: {growth:.1f}cm")
 
 
 if __name__ == "__main__":
-    ft_plant_growth()
+    ft_plant_factory()
+
